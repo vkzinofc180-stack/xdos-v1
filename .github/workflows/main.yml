@@ -1,0 +1,20 @@
+
+name: DENISRDP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar arquivos
+        uses: actions/checkout@v4
+
+      - name: Verificar ambiente
+        run: |
+          echo "DENISRDP iniciado"
+          echo "Verificando ambiente Linux"
+          uname -a
+          df -h
